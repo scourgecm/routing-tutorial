@@ -24,9 +24,9 @@ export class CrisisDetailComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.route.paramMap.subscribe((paramMap: ParamMap) => {
-      this.crisis = this.service.getCrisis(paramMap.get('id'));
-      this.editName = this.crisis.name;
+    this.route.data.subscribe((data: { crisis: Crisis }) => {
+      this.editName = data.crisis.name;
+      this.crisis = data.crisis;
     });
   }
 

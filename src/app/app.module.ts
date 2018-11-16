@@ -12,6 +12,7 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
 import { AdminModule } from './admin/admin.module';
 import { DialogService } from './dialog.service';
 import { CanDeactivateGuard } from './can-deactivate.guard';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { CanDeactivateGuard } from './can-deactivate.guard';
     HeroesModule,
     CrisesModule,
     AdminModule,
+    AuthModule,
     AppRoutingModule,
   ],
   declarations: [AppComponent, PageNotFoundComponent, ComposeMessageComponent],
