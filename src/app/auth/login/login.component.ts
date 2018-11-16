@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -30,8 +30,13 @@ export class LoginComponent {
           ? this.authService.redirectUrl
           : '/crisis-center/admin';
 
+        const navigationExtras: NavigationExtras = {
+          queryParamsHandling: 'preserve',
+          preserveFragment: true,
+        };
+
         // Redirect the user
-        this.router.navigate([redirect]);
+        this.router.navigate([redirect], navigationExtras);
       }
     });
   }
