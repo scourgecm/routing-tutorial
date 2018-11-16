@@ -10,6 +10,8 @@ import { HeroesModule } from './heroes/heroes.module';
 import { CrisesModule } from './crisis-center/crises.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
 import { AdminModule } from './admin/admin.module';
+import { DialogService } from './dialog.service';
+import { CanDeactivateGuard } from './can-deactivate.guard';
 
 @NgModule({
   imports: [
@@ -22,7 +24,7 @@ import { AdminModule } from './admin/admin.module';
     AppRoutingModule,
   ],
   declarations: [AppComponent, PageNotFoundComponent, ComposeMessageComponent],
-  providers: [],
+  providers: [DialogService, CanDeactivateGuard],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -4,6 +4,7 @@ import { CrisesListComponent } from './crises-list/crises-list.component';
 import { CrisisDetailComponent } from './crisis-detail/crisis-detail.component';
 import { CrisisCenterComponent } from './crisis-center/crisis-center.component';
 import { CrisisCenterHomeComponent } from './crisis-center-home/crisis-center-home.component';
+import { CanDeactivateGuard } from '../can-deactivate.guard';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
           {
             path: ':id',
             component: CrisisDetailComponent,
+            canDeactivate: [CanDeactivateGuard],
           },
           {
             path: '',

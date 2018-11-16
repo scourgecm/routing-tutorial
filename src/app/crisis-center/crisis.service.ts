@@ -16,9 +16,9 @@ export class CrisisService {
     return of(CRISES);
   }
 
-  getCrisis(id: string): Observable<Crisis> {
-    return of(CRISES.find((val: Crisis) => {
+  getCrisis(id: string): Crisis {
+    return CRISES.find((val: Crisis) => {
       return val.id === +id;
-    }));
+    });
   }
 }
