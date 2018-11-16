@@ -9,7 +9,6 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { CrisesModule } from './crisis-center/crises.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
-import { AdminModule } from './admin/admin.module';
 import { DialogService } from './dialog.service';
 import { CanDeactivateGuard } from './can-deactivate.guard';
 import { AuthModule } from './auth/auth.module';
@@ -21,7 +20,6 @@ import { AuthModule } from './auth/auth.module';
     FormsModule,
     HeroesModule,
     CrisesModule,
-    AdminModule,
     AuthModule,
     AppRoutingModule,
   ],
