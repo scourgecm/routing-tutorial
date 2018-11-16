@@ -6,11 +6,19 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 const routes: Routes = [
   {
     path: 'heroes',
+    redirectTo: '/superheroes',
+  },
+  {
+    path: 'hero/:id',
+    redirectTo: '/superheroes/:id',
+  },
+  {
+    path: 'superheroes',
     component: HeroesListComponent,
     data: { animation: 'heroes' },
   },
   {
-    path: 'hero/:id',
+    path: 'superheroes/:id',
     component: HeroDetailComponent,
     data: { animation: 'hero' },
   },
