@@ -19,7 +19,6 @@ import { AuthModule } from './auth/auth.module';
     BrowserAnimationsModule,
     FormsModule,
     HeroesModule,
-    CrisesModule,
     AuthModule,
     AppRoutingModule,
   ],

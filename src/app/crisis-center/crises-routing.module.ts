@@ -9,7 +9,7 @@ import { CrisisDetailResolverService } from './crisis-detail-resolver.service';
 
 const routes: Routes = [
   {
-    path: 'crisis-center',
+    path: '',
     component: CrisisCenterComponent,
     children: [
       {
@@ -37,5 +37,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
+  providers: [CrisisDetailResolverService],
 })
 export class CrisesRoutingModule {}
