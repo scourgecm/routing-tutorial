@@ -9,6 +9,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { CrisesModule } from './crisis-center/crises.module';
 import { ComposeMessageComponent } from './compose-message/compose-message.component';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   imports: [
@@ -17,10 +18,11 @@ import { ComposeMessageComponent } from './compose-message/compose-message.compo
     FormsModule,
     HeroesModule,
     CrisesModule,
+    AdminModule,
     AppRoutingModule,
   ],
   declarations: [AppComponent, PageNotFoundComponent, ComposeMessageComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
